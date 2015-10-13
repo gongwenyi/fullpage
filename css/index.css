@@ -1,0 +1,1257 @@
+/*****第一屏样式 start******/
+.page1{
+  background-color: #142441;
+  background-image: -webkit-radial-gradient(#2E4369,#142441);
+  background-image: radial-gradient(#2E4369,#142441);
+}
+.page1 .cont{
+  width: 320px;
+  height: 328px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.page1 .p1-moutain, .page1 .p1-man, .page1 .p1-rocket, .page1 .p1-ball,
+.page1 .p1-hotball, .page1 .p1-text, .page2 .p2-text1, .page2 .p2-text2,
+.page2 .p2-ball1, .page2 .p2-ball2, .page2 .p2-ball3, .page2 .p2-ball4, 
+.page2 .p2-ball5{
+  /*background: url(../imgs/m-animate-1-imp.32@2x.png) no-repeat;*/
+  background-image: url(../imgs/m-animate-1-imp.32@2x.png);
+  background-repeat: no-repeat;
+  background-size: 643px 152px;
+}
+.p1-moutain{
+  width: 230px;
+  height: 152px;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  margin-left: -115px;
+  background-position: 0 0;
+}
+.p1-man{
+  width: 40px;
+  height: 84px;
+  position: absolute;
+  left: 50px;
+  bottom: 60px;
+  background-position: -300px 0;
+  opacity: 0;
+}
+.p1-phone{
+  width: 121px;
+  height: 245px;
+  position: absolute;
+  left: 100px;
+  bottom: 60px;
+  background: 0 0 url(../imgs/m2-phone.32@2x.png) no-repeat;
+  background-size: 121px 245px;
+  opacity: 0;
+}
+.p1-rocket{
+  width: 39px;
+  height: 79px;
+  position: absolute;
+  left: 230px;
+  bottom: 60px;
+  background-position: -342px 0;
+  opacity: 0;
+}
+.p1-ball{
+  width: 35px;
+  height: 30px;
+  position: absolute;
+  left: 45px;
+  top: 70px;
+  background-position: -380px 0;
+}
+.p1-hotball{
+  width: 70px;
+  height: 97px;
+  position: absolute;
+  right: 50px;
+  top: 15px;
+  background-position: -230px 0;
+  opacity: 0;
+}
+.p1-text{
+  width: 207px;
+  height: 35px;
+  position: absolute;
+  left: 50%;
+  top: -32px;
+  margin-left: -103px;
+  background-position: -372px -78px;
+}
+.active .cont .p1-ball{
+  -webkit-animation: p1-animate1 2s ease-in-out infinite;
+  animation: p1-animate1 2s ease-in-out infinite;
+}
+.active .cont .p1-man, .active .cont .p1-rocket{
+ /* -webkit-animation: p1-animate2 2s ease-in-out;
+  animation: p1-animate2 2s ease-in-out;*/
+  -webkit-animation-name: p1-animate2;
+          animation-name: p1-animate2;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;  /*当动画完成后，保持最后一个属性值（在最后一个关键帧中定义）*/
+          animation-fill-mode: forwards;
+}
+.active .cont .p1-moutain{
+  -webkit-animation-name: p1-animate3;
+          animation-name: p1-animate3;
+  -webkit-animation-duration: .8s;
+          animation-duration: .8s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-delay: .8s;
+          animation-delay: .8s;
+}
+.active .cont .p1-phone{
+  -webkit-animation-name: p1-animate4;
+          animation-name: p1-animate4;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.active .cont .p1-hotball{
+  -webkit-animation-name: p1-animate5;
+          animation-name: p1-animate5;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  /*-webkit-animation: p1-animate5 2s ease-in-out 2.5s infinite;*/
+}
+/*****定义第一屏的动画*****/
+/**ball放大缩小动画**/
+@keyframes p1-animate1{
+  0%{
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50%{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  100%{
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes p1-animate1{
+  0%{
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50%{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  100%{
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+/**man rocket掉落的动画**/
+@-webkit-keyframes p1-animate2{
+  0%{
+    opacity: 0;
+    -webkit-transform: translate3d(0, -40px, 0);
+    transform: translate3d(0, -40px, 0);
+  }
+  60%{
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  80%{
+    opacity: 1;
+    -webkit-transform: translate3d(0, 15px, 0);
+    transform: translate3d(0, 15px, 0);
+  }
+  100%{
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes p1-animate2{
+  0%{
+    opacity: 0;
+    -webkit-transform: translate3d(0, -40px, 0);
+    transform: translate3d(0, -40px, 0);
+  }
+  60%{
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0px, 0);
+  }
+  80%{
+    opacity: 1;
+    -webkit-transform: translate3d(0, 15px, 0);
+    transform: translate3d(0, 15px, 0);
+  }
+  100%{
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+/**moutain颤抖的动画**/
+@-webkit-keyframes p1-animate3{
+  0%{
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  40%{
+    -webkit-transform: translate3d(0, 12px, 0);
+    transform: translate3d(0, 12px, 0);
+  }
+  60%{
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  80%{
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0);
+  }
+  100%{
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes p1-animate3{
+  0%{
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  40%{
+    -webkit-transform: translate3d(0, 12px, 0);
+    transform: translate3d(0, 12px, 0);
+  }
+  60%{
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  80%{
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0);
+  }
+  100%{
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+/**phone掉落的动画**/
+@-webkit-keyframes p1-animate4{
+  0%{
+    opacity: 0;
+    -webkit-transform: translate3d(0, -40px, 0);
+            transform: translate3d(0, -40px, 0);
+  }
+  100%{
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes p1-animate4{
+  0%{
+    opacity: 0;
+    -webkit-transform: translate3d(0, -40px, 0);
+            transform: translate3d(0, -40px, 0);
+  }
+  100%{
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+/**hotball上下移动动画**/
+@-webkit-keyframes p1-animate5{
+  0%{
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  50%{
+    opacity: 1;
+    -webkit-transform: translate3d(0, -10px, 0);
+            transform: translate3d(0, -10px, 0);
+  }
+  100%{
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes p1-animate5{
+  0%{
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  50%{
+    opacity: 1;
+    -webkit-transform: translate3d(0, -10px, 0);
+            transform: translate3d(0, -10px, 0);
+  }
+  100%{
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+/*****第一屏样式 end******/
+/*****第二屏样式 start*****/
+.page2{
+  background-color: #1a315f;
+  background-image: -webkit-radial-gradient(#134b70,#1a315f);
+  background-image: radial-gradient(#134b70,#1a315f);
+}
+.page2 .cont, .page3 .cont, .page4 .cont{
+  width: 320px;
+  height: 350px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.page2 .p2-good, .page3 .p3-good, .page4 .p4-good, .page5 .p5-good{
+  width: 61px;
+  height: 28px;
+  position: absolute;
+  left: 50%;
+  margin-left: -30px;
+  bottom: 0;
+  background: url(../imgs/mlike.32@2x.png) 0 0 no-repeat;
+  background-size: 61px 28px;
+}
+.page2 .p2-text1{
+  width: 210px;
+  height: 15px;
+  position: absolute;
+  left: 50%;
+  bottom: 36px;
+  margin-left: -105px;
+  background-position: -382px -63px;
+  opacity: 0;
+}
+.page2 .p2-text2{
+  width: 166px;
+  height: 30px;
+  position: absolute;
+  left: 50%;
+  bottom: 56px;
+  margin-left: -83px;
+  background-position: -450px -32px;
+  opacity: 0;
+}
+.page2 .p2-line{
+  height: 0;
+  position: absolute;
+  border-top: 1px solid #7cf364;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  opacity: 0;
+}
+.page2 .p2-line1{
+  width: 220px;
+  left: 33px;
+  top: 80px;
+  -webkit-transform: rotate(-12deg);
+          transform: rotate(-12deg);
+}
+.page2 .p2-line2{
+  width: 70px;
+  left: 249px;
+  top: 34px;
+  -webkit-transform: rotate(65deg);
+          transform: rotate(65deg);
+}
+.page2 .p2-line3{
+  width: 80px;
+  left: 279px;
+  top: 98px;
+  -webkit-transform: rotate(114deg);
+          transform: rotate(114deg);
+}
+.page2 .p2-line4{
+  width: 76px;
+  left: 247px;
+  top: 171px;
+  -webkit-transform: rotate(60deg);
+          transform: rotate(60deg);
+}
+.page2 .p2-phone{
+  width: 122px;
+  height: 247px;
+  position: absolute;
+  left: 100px;
+  top: 0;
+  background: url(../imgs/m3-phone.32@2x.png) 0 0 no-repeat;
+  background-size: 122px 247px;
+  opacity: 0;
+}
+.page2 .p2-ball1{
+  width: 42px;
+  height: 42px;
+  position: absolute;
+  left: 15px;
+  top: 60px;
+  background-position: -285px -98px; 
+  opacity: 0;
+}
+.page2 .p2-ball2{
+  width: 33px;
+  height: 31px;
+  position: absolute;
+  right: 53px;
+  top: 20px;
+  background-position: -381px -32px;
+  opacity: 0;
+}
+.page2 .p2-ball3{
+  width: 52px;
+  height: 45px;
+  position: absolute;
+  right: 15px;
+  top: 80px;
+  background-position: -232px -99px;
+  opacity: 0;
+}
+.page2 .p2-ball4{
+  width: 42px;
+  height: 41px;
+  position: absolute;
+  right: 53px;
+  top: 150px;
+  background-position: -327px -86px;
+  opacity: 0;
+}
+.page2 .p2-ball5{
+  width: 32px;
+  height: 26px;
+  position: absolute;
+  right: 20px;
+  bottom: 100px;
+  background-position: -416px 0px;
+  opacity: 0;
+}
+/***第二屏的动画***/
+.active .cont .p2-good{
+  /*-webkit-animation-name: p2-animate1;
+  -webkit-animation-duration: .5s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-delay: .5s;*/
+  -webkit-animation: p2-animate1 .5s linear .5s;
+          animation: p2-animate1 .5s linear .5s;
+}
+.active .cont .p2-text1{
+  /*-webkit-animation-name: p2-animate2;
+  -webkit-animation-duration: .3s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-delay: .5s;
+  -webkit-animation-fill-mode: forwards;*/
+  -webkit-animation: p2-animate2 .3s linear .8s forwards;
+          animation: p2-animate2 .3s linear .8s forwards;
+}
+.active .cont .p2-text2{
+  /*-webkit-animation-name: p2-animate2;
+  -webkit-animation-duration: .2s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-delay: .5s;
+  -webkit-animation-fill-mode: forwards;*/
+  -webkit-animation: p2-animate3 .2s linear .7s forwards;
+          animation: p2-animate3 .2s linear .7s forwards;
+}
+.active .cont .p2-phone{
+  /*-webkit-animation-name: p2-animate2;
+  -webkit-animation-duration: .2s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-delay: .3s;
+  -webkit-animation-fill-mode: forwards;*/
+  -webkit-animation: p2-animate2 .3s linear .5s forwards;
+          animation: p2-animate2 .3s linear .5s forwards;
+}
+.active .cont .p2-ball1{
+  -webkit-animation: p2-animate4 .2s linear 1.4s forwards;
+}
+.active .cont .p2-line1{
+  -webkit-animation: p2-animate4 .2s linear 1.6s forwards;
+}
+.active .cont .p2-ball2{
+  -webkit-animation: p2-animate4 .2s linear 1.8s forwards;
+}
+.active .cont .p2-line2{
+  -webkit-animation: p2-animate4 .2s linear 2s forwards;
+}
+.active .cont .p2-ball3{
+  -webkit-animation: p2-animate4 .2s linear 2.2s forwards;
+}
+.active .cont .p2-line3{
+  -webkit-animation: p2-animate4 .2s linear 2.4s forwards;
+}
+.active .cont .p2-ball4{
+  -webkit-animation: p2-animate4 .2s linear 2.6s forwards;
+}
+.active .cont .p2-line4{
+  -webkit-animation: p2-animate4 .2s linear 2.8s forwards;
+}
+.active .cont .p2-ball5{
+  -webkit-animation: p2-animate4 .2s linear 3s forwards;
+}
+/*p2-good上下跳动的动画*/
+@-webkit-keyframes p2-animate1{
+  0%{
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  20%{
+    -webkit-transform: translate3d(0, -20px, 0);
+            transform: translate3d(0, -20px, 0);
+  }
+  40%{
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  60%{
+    -webkit-transform: translate3d(0, -10px, 0);
+            transform: translate3d(0, -10px, 0);
+  }
+  80%{
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  90%{
+    -webkit-transform: translate3d(0, -5px, 0);
+            transform: translate3d(0, -5px, 0);
+  }
+  100%{
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes p2-animate1{
+  0%{
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  20%{
+    -webkit-transform: translate3d(0, -10px, 0);
+            transform: translate3d(0, -10px, 0);
+  }
+  40%{
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  60%{
+    -webkit-transform: translate3d(0, -5px, 0);
+            transform: translate3d(0, -5px, 0);
+  }
+  80%{
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  90%{
+    -webkit-transform: translate3d(0, -3px, 0);
+            transform: translate3d(0, -3px, 0);
+  }
+  100%{
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+/*p2-text1, p2-phone掉落动画*/
+@-webkit-keyframes p2-animate2{
+  0%{
+    opacity: 0;
+    -webkit-transform: translate3d(0, -60px, 0);
+    transform: translate3d(0, -60px, 0);
+  }
+  100%{
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes p2-animate2{
+  0%{
+    opacity: 0;
+    -webkit-transform: translate3d(0, -60px, 0);
+    transform: translate3d(0, -60px, 0);
+  }
+  100%{
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+/*p2-text2掉落动画*/
+@-webkit-keyframes p2-animate3{
+  0%{
+    opacity: 0;
+    -webkit-transform: translate3d(0, -40px, 0);
+    transform: translate3d(0, -40px, 0);
+  }
+  100%{
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes p2-animate3{
+  0%{
+    opacity: 0;
+    -webkit-transform: translate3d(0, -40px, 0);
+    transform: translate3d(0, -40px, 0);
+  }
+  100%{
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+/*p2-ball1, p2-ball2, ...p2-ball3, p2-line1, p2-line2淡出动画*/
+@-webkit-keyframes p2-animate4{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+@keyframes p2-animate4{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+/*****第二屏样式 end*****/
+/*****第三屏样式 start*****/
+.page3{
+  background-color: #075f88;
+  background-image: -webkit-radial-gradient(#3B7E9D,#075f88);
+  background-image: radial-gradient(#3B7E9D,#075f88);
+}
+.page3 .p3-text1, .page3 .p3-text2, .page3 .p3-monkey,
+.page3 .p3-bee, .page3 .p3-paste, .page3 .p3-cat,
+.page4 .p4-text1, .page4 .p4-text2, .page4 .p4-ball1,
+.page4 .p4-ball2, .page4 .p4-ball3, .page4 .p4-hotball{
+  /*background: url(../imgs/m-animate-1-imp.32@2x.png) no-repeat;*/
+  background-image: url(../imgs/m-animate-2-imp.32@2x.png);
+  background-repeat: no-repeat;
+  background-size: 923px 135px;
+}
+.page3 .p3-text1{
+  width: 200px;
+  height: 15px;
+  position: absolute;
+  left: 50%;
+  bottom: 36px;
+  margin-left: -100px;
+  background-position: -699px -54px;
+  opacity: 0;
+}
+.page3 .p3-text2{
+  width: 118px;
+  height: 25px;
+  position: absolute;
+  left: 50%;
+  bottom: 56px;
+  margin-left: -59px;
+  background-position: -730px -93px;
+  opacity: 0;
+}
+.page3 .p3-phone{
+  width: 122px;
+  height: 247px;
+  position: absolute;
+  left: 100px;
+  top: 0;
+  background: url(../imgs/m4-phone.32@2x.png) 0 0 no-repeat;
+  background-size: 122px 247px;
+  opacity: 0;
+}
+.page3 .p3-monkey{
+  width: 66px;
+  height: 63px;
+  position: absolute;
+  left: 60px;
+  bottom: 90px;
+  background-position: -431px 0;
+  opacity: 0;
+}
+.page3 .p3-bee{
+  width: 41px;
+  height: 36px;
+  position: absolute;
+  left: 20px;
+  bottom: 220px;
+  background-position: -341px -76px;
+  opacity: 0;
+}
+.page3 .p3-paste{
+  width: 46px;
+  height: 57px;
+  position: absolute;
+  right: 40px;
+  top: 63px;
+  background-position: -394px -75px;
+  opacity: 0;
+  -webkit-transform-origin: left top;
+}
+.page3 .p3-cat{
+  width: 92px;
+  height: 75px;
+  position: absolute;
+  right: 5px;
+  top: -30px;
+  background-position: -302px 0;
+  opacity: 0;
+}
+.page3 .p3-line{
+  height: 0;
+  position: absolute;
+  border-top: 1px solid #79caf4;
+  -webkit-transform-origin: top left;
+  opacity: 0;
+}
+.page3 .p3-line1{
+  width: 50px;
+  left: 55px;
+  top: 110px;
+  -webkit-transform: rotate(-6deg);
+}
+.page3 .p3-line2{
+  width: 80px;
+  right: 30px;
+  top: 90px;
+  -webkit-transform: rotate(-40deg);
+}
+/**第三屏动画**/
+.active .cont .p3-good{
+  -webkit-animation: p2-animate1 .5s linear .5s;
+          animation: p2-animate1 .5s linear .5s;
+}
+.active .cont .p3-text1{
+  -webkit-animation: p2-animate2 .3s linear .8s forwards;
+          animation: p2-animate2 .3s linear .8s forwards;
+}
+.active .cont .p3-text2{
+  -webkit-animation: p2-animate3 .2s linear .7s forwards;
+          animation: p2-animate3 .2s linear .7s forwards;
+}
+.active .cont .p3-phone{
+  -webkit-animation: p2-animate2 .3s linear .5s forwards;
+          animation: p2-animate2 .3s linear .5s forwards;
+}
+.active .cont .p3-monkey{
+  -webkit-animation: p3-animate1 .3s linear 1.5s forwards;
+          animation: p3-animate1 .3s linear 1.5s forwards;
+}
+.active .cont .p3-cat{
+  -webkit-animation: p3-animate2 .4s linear 1.5s forwards;
+          animation: p3-animate2 .4s linear 1.5s forwards;
+}
+.active .cont .p3-line2{
+  -webkit-animation: p2-animate4 .2s linear 2s forwards;
+          animation: p2-animate4 .2s linear 2s forwards;
+}
+.active .cont .p3-line1{
+  -webkit-animation: p2-animate4 .2s linear 2.2s forwards;
+          animation: p2-animate4 .2s linear 2.2s forwards;
+}
+.active .cont .p3-bee{
+  -webkit-animation: p3-animate1 .3s linear 2.4s forwards;
+          animation: p3-animate1 .3s linear 2.4s forwards;
+}
+.active .cont .p3-paste{
+  -webkit-animation: p3-animate3 2s ease-in-out 3s infinite;
+          animation: p3-animate3 2s ease-in-out 3s infinite;
+}
+/*p3-good, p3-text1, p3-text2, p3-phone的动画同第二屏*/
+/*p3-monkey, p3-bee动画*/
+@-webkit-keyframes p3-animate1{
+  0%{
+    opacity: 0;
+    -webkit-transform: translate3d(-40px, 0, 0);
+            transform: translate3d(-40px, 0, 0);
+  }
+  100%{
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes p3-animate1{
+  0%{
+    opacity: 0;
+    -webkit-transform: translate3d(-40px, 0, 0);
+            transform: translate3d(-40px, 0, 0);
+  }
+  100%{
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+/*p3-cat动画*/
+@-webkit-keyframes p3-animate2{
+  0%{
+    opacity: 0;
+    -webkit-transform: translate3d(40px, 0, 0);
+            transform: translate3d(40px, 0, 0);
+  }
+  100%{
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes p3-animate2{
+  0%{
+    opacity: 0;
+    -webkit-transform: translate3d(40px, 0, 0);
+            transform: translate3d(40px, 0, 0);
+  }
+  100%{
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+/*p3-line动画同第二屏*/
+/*p3-paste荡秋千动画*/
+@-webkit-keyframes p3-animate3{
+  0%{
+    opacity: 1;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50%{
+    opacity: 1;
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  100%{
+    opacity: 1;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+@keyframes p3-animate3{
+  0%{
+    opacity: 1;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50%{
+    opacity: 1;
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  100%{
+    opacity: 1;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+/*****第三屏样式 end*****/
+/*****第四屏样式 start*****/
+.page4{
+  background-color: #178bc1;
+}
+.page4 .p4-text1{
+  width: 174px;
+  height: 15px;
+  position: absolute;
+  left: 50%;
+  bottom: 36px;
+  margin-left: -87px;
+  background-position: -707px -69px;
+  opacity: 0;
+}
+.page4 .p4-text2{
+  width: 110px;
+  height: 25px;
+  position: absolute;
+  left: 50%;
+  bottom: 56px;
+  margin-left: -55px;
+  background-position: -738px -3px;
+  opacity: 0;
+}
+.page4 .p4-phone{
+  width: 179px;
+  height: 243px;
+  position: absolute;
+  left: 80px;
+  top: 0;
+  background: url(../imgs/m5-phone.32@2x.png) 0 0 no-repeat;
+  background-size: 179px 243px;
+  opacity: 0;
+}
+.page4 .p4-ball1{
+  width: 105px;
+  height: 112px;
+  position: absolute;
+  left: 50px;
+  top: -10px;
+  background-position: 0 0;
+  -webkit-transform-origin: right bottom;
+          transform-origin: right bottom;
+  opacity: 0;
+}
+.page4 .p4-ball2{
+  width: 90px;
+  height: 84px;
+  position: absolute;
+  left: 40px;
+  top: 120px;
+  background-position: -114px 0;
+  -webkit-transform-origin: right top;
+          transform-origin: right top;
+  opacity: 0;
+}
+.page4 .p4-ball3{
+  width: 82px;
+  height: 84px;
+  position: absolute;
+  right: 20px;
+  top: 80px;
+  background-position: -212px 0;
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+  opacity: 0;
+}
+.page4 .p4-hotball{
+  width: 38px;
+  height: 52px;
+  position: absolute;
+  right: 30px;
+  top: 220px;
+  background-position: -303px -75px;
+  opacity: 0;
+}
+/**第四屏动画**/
+.active .cont .p4-good{
+  -webkit-animation: p2-animate1 .5s linear .5s;
+          animation: p2-animate1 .5s linear .5s;
+}
+.active .cont .p4-text1{
+  -webkit-animation: p2-animate2 .3s linear .8s forwards;
+          animation: p2-animate2 .3s linear .8s forwards;
+}
+.active .cont .p4-text2{
+  -webkit-animation: p2-animate3 .2s linear .7s forwards;
+          animation: p2-animate3 .2s linear .7s forwards;
+}
+.active .cont .p4-phone{
+  -webkit-animation: p2-animate2 .3s linear .5s forwards;
+          animation: p2-animate2 .3s linear .5s forwards;
+}
+.active .cont .p4-ball1{
+  -webkit-animation: p4-animate1 .5s linear 1.5s forwards;
+          animation: p4-animate1 .5s linear 1.5s forwards;
+}
+.active .cont .p4-ball2{
+  -webkit-animation: p4-animate1 .5s linear 1.8s forwards;
+          animation: p4-animate1 .5s linear 1.8s forwards;
+}
+.active .cont .p4-ball3{
+  -webkit-animation: p4-animate1 .5s linear 2s forwards;
+          animation: p4-animate1 .5s linear 2s forwards;
+}
+.active .cont .p4-hotball{
+  -webkit-animation: p4-animate2 .5s ease-in-out 2.5s forwards;
+          animation: p4-animate2 .5s ease-in-out 2.5s forwards;
+}
+/*p4-good, p4-text1, p4-text2, p4-phone动画同第二屏*/
+/*p4-ball1, p4-ball2, p4-ball3放大动画*/
+@-webkit-keyframes p4-animate1{
+  0%{
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100%{
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes p4-animate1{
+  0%{
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100%{
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+/*p4-hotball上升动画*/
+@-webkit-keyframes p4-animate2{
+  0%{
+    opacity: 0;
+    -webkit-transform: translate3d(0, 50px, 0);
+            transform: translate3d(0, 50px, 0);
+  }
+  100%{
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes p4-animate2{
+  0%{
+    opacity: 0;
+    -webkit-transform: translate3d(0, 50px, 0);
+            transform: translate3d(0, 50px, 0);
+  }
+  100%{
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+/*****第四屏样式 end*****/
+/*****第五屏样式 start*****/
+.page5{
+  background-color: #97c96a;
+}
+.page5 .p5-bg{
+  width: 100%;
+  height: 270px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #2571BB;
+  background-image: -webkit-linear-gradient(#1080B2, #96F0ED);
+  background-image: linear-gradient(#1080B2, #96F0ED);
+}
+.page5 .cont{
+  width: 320px;
+  height: 350px;
+  position: absolute;
+  left: 50%;
+  top: 80px;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.page5 .p5-cloud, .page5 .p5-house, .page5 .p5-sleep, .page5 .p5-text1, .page5 .p5-text2, .page5 .p5-phone{
+  /*background: url(../imgs/m-animate-1-imp.32@2x.png) no-repeat;*/
+  background-image: url(../imgs/m-animate-3-imp.32@2x.png);
+  background-repeat: no-repeat;
+  background-size: 1077px 141px;
+}
+.page5 .p5-cloud{
+  width: 52px;
+  height: 27px;
+  position: absolute;
+  left: 86px;
+  top: 0;
+  background-position: -312px -106px;
+}
+.page5 .p5-house{
+  width: 320px;
+  height: 105px;
+  position: absolute;
+  left: 0;
+  top: 98px;
+  background-position: 0 0; 
+}
+.page5 .p5-sleep{
+  width: 56px;
+  height: 56px;
+  position: absolute;
+  right: 2px;
+  top: 50px;
+  background-position: -540px 0;
+  opacity: 0;
+}
+.page5 .p5-walk{
+  width: 60px;
+  height: 67px;
+  position: absolute;
+  left: 145px;
+  top: 130px;
+}
+.page5 .p5-man{
+  width: 60px;
+  height: 67px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: url(../imgs/mrunner.32@2x.png) 0 0 no-repeat;
+  background-size: 540px 67px;
+}
+.page5 .p5-text1{
+  width: 260px;
+  height: 15px;
+  position: absolute;
+  left: 50%;
+  bottom: 36px;
+  margin-left: -129px;
+  background-position: -382px -126px;
+  opacity: 0;
+}
+.page5 .p5-text2{
+  width: 112px;
+  height: 25px;
+  position: absolute;
+  left: 50%;
+  bottom: 56px;
+  margin-left: -56px;
+  background-position: -148px -108px;
+  opacity: 0;
+}
+.page5 .p5-phone{
+  width: 209px;
+  height: 250px;
+  position: absolute;
+  left: 55px;
+  top: 0;
+  background: url(../imgs/m6-phone.32@2x.png) 0 0 no-repeat;
+  background-size: 209px 250px;
+  opacity: 0;
+}
+/**第五屏的动画**/
+.active .cont .p5-good{
+  -webkit-animation: p2-animate1 .5s linear .5s;
+          animation: p2-animate1 .5s linear .5s;
+}
+.active .cont .p5-text1{
+  -webkit-animation: p2-animate2 .3s linear .8s forwards;
+          animation: p2-animate2 .3s linear .8s forwards;
+}
+.active .cont .p5-text2{
+  -webkit-animation: p2-animate3 .2s linear .7s forwards;
+          animation: p2-animate3 .2s linear .7s forwards;
+}
+.active .cont .p5-phone{
+  -webkit-animation: p2-animate2 .3s linear .5s forwards;
+          animation: p2-animate2 .3s linear .5s forwards;
+}
+.active .cont .p5-cloud{
+  -webkit-animation: p5-animate1 2s ease-in-out 1s forwards;
+}
+.active .cont .p5-man{
+  -webkit-animation-name: p5-animate2;
+  -webkit-animation-duration: .8s;
+  -webkit-animation-timing-function: steps(9);
+  -webkit-animation-iteration-count: infinite;
+}
+.active .cont .p5-walk{
+  -webkit-animation: p5-animate3 2s linear .5s forwards;
+          animation: p5-animate3 2s linear .5s forwards;
+}
+.active .cont .p5-sleep{
+  -webkit-animation: p2-animate4 .3s linear 3s forwards;
+          animation: p2-animate4 .3s linear 3s forwards;
+}
+/*p5-good, p5-text1, p5-text2, p5-phone动画同第二屏*/
+/*p5-cloud飘动动画*/
+@-webkit-keyframes p5-animate1{
+  0%{
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  100%{
+    -webkit-transform: translate3d(-66px, 0, 0);
+            transform: translate3d(-66px, 0, 0);
+  }
+}
+@keyframes p5-animate1{
+  0%{
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  100%{
+    -webkit-transform: translate3d(-66px, 0, 0);
+            transform: translate3d(-66px, 0, 0);
+  }
+}
+/*p5-man人跑的动画*/
+@-webkit-keyframes p5-animate2{
+  0%{
+    background-position: 0, 0;
+  }
+  100%{
+    background-position: -540px, 0;
+  }
+}
+@keyframes p5-animate2{
+  0%{
+    background-position: 0, 0;
+  }
+  100%{
+    background-position: -540px, 0;
+  }
+}
+/*p5-walk的动画*/
+@-webkit-keyframes p5-animate3{
+  0%{
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  90%{
+    opacity: 1;
+    -webkit-transform: translate3d(70px, 0, 0);
+            transform: translate3d(70px, 0, 0);
+  }
+  100%{
+    opacity: 0;
+    -webkit-transform: translate3d(80px, 0, 0);
+            transform: translate3d(80px, 0, 0);
+  }
+}
+@keyframes p5-animate3{
+  0%{
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  90%{
+    opacity: 1;
+    -webkit-transform: translate3d(70px, 0, 0);
+            transform: translate3d(70px, 0, 0);
+  }
+  100%{
+    opacity: 0;
+    -webkit-transform: translate3d(80px, 0, 0);
+            transform: translate3d(80px, 0, 0);
+  }
+}
+/*p5-sleep淡出的动画同第二屏*/
+/*****第五屏样式 end*****/
+.page6{
+  background-color: #178ac0;
+}
